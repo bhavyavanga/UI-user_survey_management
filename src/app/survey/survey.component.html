@@ -1,0 +1,160 @@
+<div class="container text-center">
+    <div>
+        <h4>Survey Management</h4>
+        <h6>------------------------------------------------------------------------------------------</h6>
+    </div>
+</div>
+
+<!-- <div id="createSurvey">
+    <form  style="max-width: 600px; margin: 0 auto;"> 
+            <div class="m-3">
+                <div class="form-group row">							
+                    <div>
+                        <input type="text" class="form-control" id="id" hidden>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">Title</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="title" placeholder="Enter Title" required minlength=2 maxlength=20>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">Description</label>
+                    <div class="col-6">
+                        <input type="textarea" class="form-control" id="description" placeholder="Enter Description" required minlength=2 maxlength=250> 
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">City</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="city" placeholder="Enter City" required>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">State</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="state" placeholder="Enter State" required>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">Country</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="country" placeholder="Enter Country" required>
+                    </div>
+                </div>	
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">Zip Code</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="zip" placeholder="Enter Zip" required>
+                    </div>
+                </div>		
+                
+                <div class="form-group row">
+                    <label class="col-form-label col-4">Survey Date</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="surveyDate" placeholder="Enter Survey Date" required>
+                    </div>
+                </div>			
+                
+                <div>
+                    <button type="submit" class="btn btn-primary" id="btnSave">Save</button>
+                </div>
+                
+            </div>
+        </form> -->
+
+
+        <div class="container">
+            <form [formGroup]="surveyForm" (ngSubmit)="saveSurvey()">
+            
+                <div>
+                    <input type="text" class="form-control" id="id" hidden>
+                </div>
+            
+            <div class="form-group has-error has-feedback">
+            <label name="title" class="control-label">Title</label>
+            <input type="text" id="title" name="title" class="form-control" formControlName="title">
+            
+            </div>
+
+            <div class="form-group has-error has-feedback">
+                <label name="description" class="control-label">Description</label>
+                <input type="text" id="description" name="description" class="form-control" formControlName="description">
+                
+                </div>
+            
+            <div class="form-group has-error has-feedback">
+                <label name="city" class="control-label">City:</label>
+                <input type="text" id="city" name="city" class="form-control" formControlName="city" >
+               
+            </div>
+
+            <div class="form-group has-error has-feedback">
+                <label name="state" class="control-label">State:</label>
+                <input type="text" id="state" name="state" class="form-control" formControlName="state" >
+               
+            </div>
+
+            <div class="form-group has-error has-feedback">
+                <label name="country" class="control-label">Country:</label>
+                <input type="text" id="country" name="country" class="form-control" formControlName="country" >
+               
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label name="'zip" class="control-label">Zip Code:</label>
+                <input type="text" id="zip" name="zip" class="form-control" formControlName="zip" >
+               
+            </div>
+            
+            <div class="form-group has-error has-feedback">
+            <label name="surveyDate" class="control-label"> Survey Date:</label>
+            <input type="text" id="surveyDate" name="surveyDate" class="form-control"formControlName="surveyDate" required email>
+            
+            </div>
+                                    
+            <button class="btn btn-primary" type="submit">Add</button>
+            
+            </form></div>
+
+        <div class="container text-center">
+            <div>
+                <h6>------------------------------------------------------------------------------------------</h6>
+            </div>
+        </div>
+    <div id="divSuccessMsg"></div>			
+
+
+<!-- <div class="container"><b>SURVEY TABLE</b></div>
+
+<div id="allSurveyTable" class="container" style="padding: 2rem 0rem;">			
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered" id="tblSurvey">
+              <thead class="black white-text">
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">City</th>
+                  <th scope="col">State</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Zip Code</th>
+                  <th scope="col">Survey Date</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="tBody">
+            
+              </tbody>
+             </table> 
+         </div>
+    </div>
+</div> -->
